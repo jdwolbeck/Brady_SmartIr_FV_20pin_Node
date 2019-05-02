@@ -19,7 +19,7 @@ extern char U2TxBuffer[MAX];
 
 extern void uart_init(void);
 extern void uart_write_string(char[]);
-void uart_print(char[]);
+extern void uart_print(char[]);
 
 #ifdef	__cplusplus
 }

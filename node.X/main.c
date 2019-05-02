@@ -56,7 +56,6 @@
 #pragma config DSWDTEN = OFF            // Deep Sleep Watchdog Timer Enable bit (DSWDT disabled)
 
 #include <xc.h>
-
 #include <stdint.h>        /* Includes uint16_t definition                    */
 #include <stdbool.h>       /* Includes true/false definition                  */
 #include "system.h"
@@ -71,6 +70,7 @@ int main() {
     application_init();
 
     while (1) {
+        ms_delay(10);
         node_application();
         //getConversions();
     }

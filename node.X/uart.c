@@ -1,6 +1,7 @@
 #include<xc.h>
 #include "app.h"
 #include "uart.h"
+#include "bluetooth.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -55,8 +56,8 @@ void uart_print(char str[])
     int i = 0;
     while(str[i] != '\0')
     {
-        while(!U1STAbits.TRMT);
-        U1TXREG = str[i++];
+        while(!U2STAbits.TRMT);
+        U2TXREG = str[i++];
     }
 }
 
@@ -92,7 +93,15 @@ bool clearBuffer(void)
 /* UART2 U2RX interrupt routine code */
 void __attribute__((interrupt, no_auto_psv)) _U2RXInterrupt( void )
 {
-    
-    IFS1bits.U2RXIF = 0; // clear U12X flag 
     appData.U2RxByte = U2RXREG;
+
+    if(appData.U2RxByte != '\0')
+    {
+        if(bleData.packetIndex == (PACKET_LEN - 1))
+            bleData.packetIndex = 0;
+        bleData.packetBuf[bleData.packetIndex++] = appData.U2RxByte;
+        bleData.packetBuf[bleData.packetIndex] = '\0';
+        bleData.dataReceived = true;
+    }
+    IFS1bits.U2RXIF = 0; // clear U2RX flag 
 }

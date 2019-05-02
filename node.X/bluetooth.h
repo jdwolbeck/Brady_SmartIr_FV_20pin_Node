@@ -7,7 +7,7 @@
 #define STR_LEN 500
 #define PACKET_LEN 1024
 
-#define LED_JOSH LATBbits.LATB12
+#define LED_JOSH LATAbits.LATA3
 
 extern char MAC_LAST[20];
 extern char MAC_THIS[20];

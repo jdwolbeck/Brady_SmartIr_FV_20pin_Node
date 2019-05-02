@@ -1,21 +1,21 @@
-Microchip Technology Inc, v1.36 (A)
+Microchip Technology Inc, v1.35 (A)
 
 Tool Name:
-  c:\program files (x86)\microchip\xc16\v1.36\bin\bin\..\bin/elf-ld.exe
+  c:\program files (x86)\microchip\xc16\v1.35\bin\bin\..\bin/elf-ld.exe
 
 Command:
   -p24FV32KA301 \
   -o \
   dist/default/production/node.X.production.elf \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/.. \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/PIC24E/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/PIC24F/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/PIC24H/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC30F/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC33C/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC33E/gld \
-  -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC33F/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/.. \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/PIC24E/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/PIC24F/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/PIC24H/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/dsPIC33C/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../support/dsPIC33F/gld \
   build/default/production/adc1.o \
   build/default/production/app.o \
   build/default/production/gpio.o \
@@ -51,42 +51,42 @@ Command:
 Optional library libpPIC24Fxxx.a not found
 Archive member included because of file (symbol)
 
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                               (__resetPRI)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o) (__data_init_standard)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o) (__data_init_standard)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
                               (__crt_start_mode_normal)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
                               build/default/production/bluetooth.o (_memset)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strcmp.XX_eo)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strcmp.XX_eo)
                               build/default/production/bluetooth.o (_strcmp)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strlen.XX_eo)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strlen.XX_eo)
                               build/default/production/bluetooth.o (_strlen)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
                               build/default/production/app.o (__sprintf_cdnopuxX)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (___Printf_cdnopuxX)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (___Putfld_cdnopuxX)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (_memcpy)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (_strchr)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo) (__Litob)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (__Puttxt)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (__Vacopy)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divsi3.eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___divsi3)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___udivsi3)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___umodsi3)
-c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                              c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___udivdi3)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (___Printf_cdnopuxX)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (___Putfld_cdnopuxX)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (_memcpy)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (_strchr)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo) (__Litob)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (__Puttxt)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (__Vacopy)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___divsi3)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___udivsi3)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___umodsi3)
+c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                              c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___udivdi3)
 
 
 Selected CodeGuard Options:
@@ -111,19 +111,19 @@ CodeGuard EEPROM Memory:
   boot    (none)
 
 
-xc16-ld 1.36 (A)
+xc16-ld 1.35 (A)
 
 "program" Memory  [Origin = 0x200, Length = 0x5600]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0xb84          0x1146  (4422)
-.const                       0xd84                0x8c            0xd2  (210)
-.text                        0xe10               0x752           0xafb  (2811)
-.dinit                      0x1562                0x72            0xab  (171)
-.text                       0x15d4                0x26            0x39  (57)
+.text                        0x200               0xbb6          0x1191  (4497)
+.const                       0xdb6                0x6e            0xa5  (165)
+.text                        0xe24               0x6a8           0x9fc  (2556)
+.dinit                      0x14cc                0x72            0xab  (171)
+.text                       0x153e                0x2a            0x3f  (63)
 
-                 Total "program" memory used (bytes):         0x1df7  (7671) 23%
+                 Total "program" memory used (bytes):         0x1d1c  (7452) 22%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x800]
@@ -186,117 +186,117 @@ External Symbols in Program Memory (by address):
                   0x000252                  __data_init
                   0x0002cc                  __T1Interrupt
                   0x000336                  __U2RXInterrupt
-                  0x000348                  __DefaultInterrupt
-                  0x00034e                  _memset
-                  0x00035c                  _strcmp
-                  0x00037c                  _strlen
-                  0x000388                  sprintf_cdnopuxX.XXeo:_prout
-                  0x000396                  __sprintf_cdnopuxX
-                  0x0003b4                  ___Printf_cdnopuxX
-                  0x000518                  ___Putfld_cdnopuxX
-                  0x00073c                  _memcpy
-                  0x00074a                  _strchr
-                  0x000762                  __Litob
-                  0x0009c0                  __Puttxt
-                  0x000b38                  __Vacopy
-                  0x000b3c                  ___divsi3
-                  0x000b5a                  ___udivsi3
-                  0x000b7a                  ___umodsi3
-                  0x000bcc                  ___udivmoddi3
-                  0x000cb2                  ___udivdi3
-                  0x000cc0                  ___umoddi3
-                  0x000cc8                  ___divdi3
-                  0x000d28                  ___moddi3
-                  0x000e10                  _BLE_init
-                  0x000e56                  _BLE_reboot
-                  0x000e76                  _node_application
-                  0x00106c                  _BLE_connect
-                  0x0010c8                  _BLE_searchStr
-                  0x001170                  _BLE_parseData
-                  0x00120e                  _BLE_disconnect
-                  0x00124e                  _ADC1_init
-                  0x00129c                  _ADC1_start
-                  0x0012b6                  _ADC1_stop
-                  0x0012be                  _ADC1_conversionComplete
-                  0x0012d6                  _ADC1_channelSelect
-                  0x0012e2                  _ADC1_vRefSelect
-                  0x001344                  _ADC1_getConversion
-                  0x001364                  _application_init
-                  0x001382                  _getConversions
-                  0x0013da                  _timer_init
-                  0x0013fa                  _ms_delay
-                  0x00142a                  _uart_init
-                  0x001456                  _uart_write_byte
-                  0x001462                  _uart_print
-                  0x001496                  _uart_write_string
-                  0x0014cc                  _clearBuffer
-                  0x0014f0                  _GPIO_enable
-                  0x001544                  _GPIO_lo
-                  0x001554                  _GPIO_hi
-                  0x0015d4                  _system_init
-                  0x0015f0                  _main
+                  0x00037a                  __DefaultInterrupt
+                  0x000380                  _memset
+                  0x00038e                  _strcmp
+                  0x0003ae                  _strlen
+                  0x0003ba                  sprintf_cdnopuxX.XXeo:_prout
+                  0x0003c8                  __sprintf_cdnopuxX
+                  0x0003e6                  ___Printf_cdnopuxX
+                  0x00054a                  ___Putfld_cdnopuxX
+                  0x00076e                  _memcpy
+                  0x00077c                  _strchr
+                  0x000794                  __Litob
+                  0x0009f2                  __Puttxt
+                  0x000b6a                  __Vacopy
+                  0x000b6e                  ___divsi3
+                  0x000b8c                  ___udivsi3
+                  0x000bac                  ___umodsi3
+                  0x000bfe                  ___udivmoddi3
+                  0x000ce4                  ___udivdi3
+                  0x000cf2                  ___umoddi3
+                  0x000cfa                  ___divdi3
+                  0x000d5a                  ___moddi3
+                  0x000e24                  _BLE_init
+                  0x000e6a                  _node_application
+                  0x000fb2                  _BLE_connect
+                  0x00100e                  _BLE_searchStr
+                  0x0010b6                  _BLE_parseData
+                  0x001154                  _BLE_reboot
+                  0x001174                  _BLE_disconnect
+                  0x0011ae                  _ADC1_init
+                  0x0011fc                  _ADC1_start
+                  0x001216                  _ADC1_stop
+                  0x00121e                  _ADC1_conversionComplete
+                  0x001236                  _ADC1_channelSelect
+                  0x001242                  _ADC1_vRefSelect
+                  0x0012a4                  _ADC1_getConversion
+                  0x0012c4                  _application_init
+                  0x0012e2                  _getConversions
+                  0x00133a                  _timer_init
+                  0x00135a                  _ms_delay
+                  0x00138a                  _uart_init
+                  0x0013b6                  _uart_write_byte
+                  0x0013c2                  _uart_print
+                  0x0013f6                  _uart_write_string
+                  0x00142c                  _clearBuffer
+                  0x001450                  _GPIO_enable
+                  0x0014ae                  _GPIO_lo
+                  0x0014be                  _GPIO_hi
+                  0x00153e                  _system_init
+                  0x00155a                  _main
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0012d6                  _ADC1_channelSelect
-                  0x0012be                  _ADC1_conversionComplete
-                  0x001344                  _ADC1_getConversion
-                  0x00124e                  _ADC1_init
-                  0x00129c                  _ADC1_start
-                  0x0012b6                  _ADC1_stop
-                  0x0012e2                  _ADC1_vRefSelect
-                  0x00106c                  _BLE_connect
-                  0x00120e                  _BLE_disconnect
-                  0x000e10                  _BLE_init
-                  0x001170                  _BLE_parseData
-                  0x000e56                  _BLE_reboot
-                  0x0010c8                  _BLE_searchStr
-                  0x0014f0                  _GPIO_enable
-                  0x001554                  _GPIO_hi
-                  0x001544                  _GPIO_lo
-                  0x000348                  __DefaultInterrupt
+                  0x001236                  _ADC1_channelSelect
+                  0x00121e                  _ADC1_conversionComplete
+                  0x0012a4                  _ADC1_getConversion
+                  0x0011ae                  _ADC1_init
+                  0x0011fc                  _ADC1_start
+                  0x001216                  _ADC1_stop
+                  0x001242                  _ADC1_vRefSelect
+                  0x000fb2                  _BLE_connect
+                  0x001174                  _BLE_disconnect
+                  0x000e24                  _BLE_init
+                  0x0010b6                  _BLE_parseData
+                  0x001154                  _BLE_reboot
+                  0x00100e                  _BLE_searchStr
+                  0x001450                  _GPIO_enable
+                  0x0014be                  _GPIO_hi
+                  0x0014ae                  _GPIO_lo
+                  0x00037a                  __DefaultInterrupt
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
-                  0x000762                  __Litob
-                  0x0009c0                  __Puttxt
+                  0x000794                  __Litob
+                  0x0009f2                  __Puttxt
                   0x0002cc                  __T1Interrupt
                   0x000336                  __U2RXInterrupt
-                  0x000b38                  __Vacopy
-                  0x0003b4                  ___Printf_cdnopuxX
-                  0x000518                  ___Putfld_cdnopuxX
-                  0x000cc8                  ___divdi3
-                  0x000b3c                  ___divsi3
-                  0x000d28                  ___moddi3
-                  0x000cb2                  ___udivdi3
-                  0x000bcc                  ___udivmoddi3
-                  0x000b5a                  ___udivsi3
-                  0x000cc0                  ___umoddi3
-                  0x000b7a                  ___umodsi3
+                  0x000b6a                  __Vacopy
+                  0x0003e6                  ___Printf_cdnopuxX
+                  0x00054a                  ___Putfld_cdnopuxX
+                  0x000cfa                  ___divdi3
+                  0x000b6e                  ___divsi3
+                  0x000d5a                  ___moddi3
+                  0x000ce4                  ___udivdi3
+                  0x000bfe                  ___udivmoddi3
+                  0x000b8c                  ___udivsi3
+                  0x000cf2                  ___umoddi3
+                  0x000bac                  ___umodsi3
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000396                  __sprintf_cdnopuxX
-                  0x001364                  _application_init
-                  0x0014cc                  _clearBuffer
-                  0x001382                  _getConversions
-                  0x0015f0                  _main
-                  0x00073c                  _memcpy
-                  0x00034e                  _memset
-                  0x0013fa                  _ms_delay
-                  0x000e76                  _node_application
-                  0x00074a                  _strchr
-                  0x00035c                  _strcmp
-                  0x00037c                  _strlen
-                  0x0015d4                  _system_init
-                  0x0013da                  _timer_init
-                  0x00142a                  _uart_init
-                  0x001462                  _uart_print
-                  0x001456                  _uart_write_byte
-                  0x001496                  _uart_write_string
-                  0x000388                  sprintf_cdnopuxX.XXeo:_prout
+                  0x0003c8                  __sprintf_cdnopuxX
+                  0x0012c4                  _application_init
+                  0x00142c                  _clearBuffer
+                  0x0012e2                  _getConversions
+                  0x00155a                  _main
+                  0x00076e                  _memcpy
+                  0x000380                  _memset
+                  0x00135a                  _ms_delay
+                  0x000e6a                  _node_application
+                  0x00077c                  _strchr
+                  0x00038e                  _strcmp
+                  0x0003ae                  _strlen
+                  0x00153e                  _system_init
+                  0x00133a                  _timer_init
+                  0x00138a                  _uart_init
+                  0x0013c2                  _uart_print
+                  0x0013b6                  _uart_write_byte
+                  0x0013f6                  _uart_write_string
+                  0x0003ba                  sprintf_cdnopuxX.XXeo:_prout
 
 Memory Configuration
 
@@ -330,7 +330,7 @@ LOAD build/default/production/interrupts.o
 LOAD build/default/production/bluetooth.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD pPIC24Fxxx
-LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libfx-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libfx-elf.a
                     0xf80000                  __FBS = 0xf80000
                     0xf80004                  __FGS = 0xf80004
                     0xf80006                  __FOSCSEL = 0xf80006
@@ -353,13 +353,13 @@ LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0xb84
+.text             0x000200        0xbb6
  *(.init)
- .init            0x000200         0x4c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+ .init            0x000200         0x4c c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                   0x000200                  __resetPRI
                   0x000200                  __reset
                   0x00023c                  __psv_init
- .init            0x00024c         0x7c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+ .init            0x00024c         0x7c c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
                   0x000252                  __data_init_standard
                   0x000252                  __data_init
  *(.user_init)
@@ -367,82 +367,82 @@ LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libfx-elf.a
  *(.isr*)
  .isr.text        0x0002cc         0x6a build/default/production/app.o
                   0x0002cc                  __T1Interrupt
- .isr.text        0x000336         0x12 build/default/production/uart.o
+ .isr.text        0x000336         0x44 build/default/production/uart.o
                   0x000336                  __U2RXInterrupt
- .isr             0x000348          0x4 default_isr
-                  0x000348                  __DefaultInterrupt
+ .isr             0x00037a          0x4 default_isr
+                  0x00037a                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x00034c          0x2 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x00034c                  __crt_start_mode
-                  0x00034c                  __crt_start_mode_normal
- .libc.memset     0x00034e          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
-                  0x00034e                  _memset
- .libc.strcmp     0x00035c         0x20 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strcmp.XX_eo)
-                  0x00035c                  _strcmp
- .libc.strlen     0x00037c          0xc c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strlen.XX_eo)
-                  0x00037c                  _strlen
- .libc.prout      0x000388          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
-                  0x000388                  sprintf_cdnopuxX.XXeo:_prout
+                  0x00037e          0x2 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x00037e                  __crt_start_mode
+                  0x00037e                  __crt_start_mode_normal
+ .libc.memset     0x000380          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
+                  0x000380                  _memset
+ .libc.strcmp     0x00038e         0x20 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strcmp.XX_eo)
+                  0x00038e                  _strcmp
+ .libc.strlen     0x0003ae          0xc c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strlen.XX_eo)
+                  0x0003ae                  _strlen
+ .libc.prout      0x0003ba          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0003ba                  sprintf_cdnopuxX.XXeo:_prout
  .libc._sprintf_cdnopuxX
-                  0x000396         0x1e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
-                  0x000396                  __sprintf_cdnopuxX
+                  0x0003c8         0x1e c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0003c8                  __sprintf_cdnopuxX
  .libc.__Printf_cdnopuxX
-                  0x0003b4        0x164 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
-                  0x0003b4                  ___Printf_cdnopuxX
+                  0x0003e6        0x164 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x0003e6                  ___Printf_cdnopuxX
  .libc.__Putfld_cdnopuxX
-                  0x000518        0x224 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
-                  0x000518                  ___Putfld_cdnopuxX
- .libc.memcpy     0x00073c          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
-                  0x00073c                  _memcpy
- .libc.strchr     0x00074a         0x18 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
-                  0x00074a                  _strchr
- .libc._Litob     0x000762        0x25e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
-                  0x000762                  __Litob
- .libc._Puttxt    0x0009c0        0x178 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
-                  0x0009c0                  __Puttxt
- .libc._Vacopy    0x000b38          0x4 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
-                  0x000b38                  __Vacopy
- .libm.divsi3     0x000b3c         0x1e c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divsi3.eo)
-                  0x000b3c                  ___divsi3
- .libm.udivsi3    0x000b5a         0x20 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
-                  0x000b5a                  ___udivsi3
- .libm.umodsi3    0x000b7a          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
-                  0x000b7a                  ___umodsi3
+                  0x00054a        0x224 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                  0x00054a                  ___Putfld_cdnopuxX
+ .libc.memcpy     0x00076e          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+                  0x00076e                  _memcpy
+ .libc.strchr     0x00077c         0x18 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+                  0x00077c                  _strchr
+ .libc._Litob     0x000794        0x25e c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+                  0x000794                  __Litob
+ .libc._Puttxt    0x0009f2        0x178 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+                  0x0009f2                  __Puttxt
+ .libc._Vacopy    0x000b6a          0x4 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+                  0x000b6a                  __Vacopy
+ .libm.divsi3     0x000b6e         0x1e c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                  0x000b6e                  ___divsi3
+ .libm.udivsi3    0x000b8c         0x20 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x000b8c                  ___udivsi3
+ .libm.umodsi3    0x000bac          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                  0x000bac                  ___umodsi3
  .libm.__PplusBdi
-                  0x000b80         0x26 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000bb2         0x26 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  .libm.__PminusBdi
-                  0x000ba6         0x26 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000bd8         0x26 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
  .libm.__udivmoddi3
-                  0x000bcc         0xe6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000bcc                  ___udivmoddi3
+                  0x000bfe         0xe6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000bfe                  ___udivmoddi3
  .libm.__udivdi3
-                  0x000cb2          0xe c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cb2                  ___udivdi3
+                  0x000ce4          0xe c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000ce4                  ___udivdi3
  .libm.__umoddi3
-                  0x000cc0          0x8 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cc0                  ___umoddi3
+                  0x000cf2          0x8 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000cf2                  ___umoddi3
  .libm.__divdi3
-                  0x000cc8         0x60 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000cc8                  ___divdi3
+                  0x000cfa         0x60 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000cfa                  ___divdi3
  .libm.__moddi3
-                  0x000d28         0x5c c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
-                  0x000d28                  ___moddi3
+                  0x000d5a         0x5c c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x000d5a                  ___moddi3
 
 usercode
  *(usercode)
 
 __FBS             0xf80000          0x2
  *(__FBS.sec*)
- __FBS.sec        0xf80000          0x2 /CW/_FBS(Mä
+ __FBS.sec        0xf80000          0x2 /CW/_FBS
                   0xf80000                  __FBS.sec
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGS`½ä
+ __FGS.sec        0xf80004          0x2 /CW/_FGSfÂ
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -466,57 +466,57 @@ __FDS
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x34c1
+.debug_info       0x000000       0x32cb
  *(.debug_info)
  .debug_info      0x000000        0x891 build/default/production/adc1.o
  .debug_info      0x000891        0xbce build/default/production/app.o
  .debug_info      0x00145f        0x217 build/default/production/gpio.o
  .debug_info      0x001676        0x159 build/default/production/main.o
  .debug_info      0x0017cf        0x241 build/default/production/system.o
- .debug_info      0x001a10       0x10f2 build/default/production/uart.o
- .debug_info      0x002b02        0x12a build/default/production/interrupts.o
- .debug_info      0x002c2c        0x895 build/default/production/bluetooth.o
+ .debug_info      0x001a10       0x105c build/default/production/uart.o
+ .debug_info      0x002a6c        0x12a build/default/production/interrupts.o
+ .debug_info      0x002b96        0x735 build/default/production/bluetooth.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x742
+.debug_abbrev     0x000000        0x725
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x153 build/default/production/adc1.o
  .debug_abbrev    0x000153        0x188 build/default/production/app.o
  .debug_abbrev    0x0002db         0x6a build/default/production/gpio.o
  .debug_abbrev    0x000345         0x34 build/default/production/main.o
  .debug_abbrev    0x000379         0x59 build/default/production/system.o
- .debug_abbrev    0x0003d2        0x1a3 build/default/production/uart.o
- .debug_abbrev    0x000575         0x1f build/default/production/interrupts.o
- .debug_abbrev    0x000594        0x1ae build/default/production/bluetooth.o
+ .debug_abbrev    0x0003d2        0x1a4 build/default/production/uart.o
+ .debug_abbrev    0x000576         0x1f build/default/production/interrupts.o
+ .debug_abbrev    0x000595        0x190 build/default/production/bluetooth.o
 
-.debug_line       0x000000        0x79d
+.debug_line       0x000000        0x796
  *(.debug_line)
  .debug_line      0x000000        0x125 build/default/production/adc1.o
  .debug_line      0x000125        0x14b build/default/production/app.o
- .debug_line      0x000270         0xf9 build/default/production/gpio.o
- .debug_line      0x000369         0x38 build/default/production/main.o
- .debug_line      0x0003a1         0xee build/default/production/system.o
- .debug_line      0x00048f        0x137 build/default/production/uart.o
- .debug_line      0x0005c6         0x1a build/default/production/interrupts.o
- .debug_line      0x0005e0        0x1bd build/default/production/bluetooth.o
+ .debug_line      0x000270         0xfa build/default/production/gpio.o
+ .debug_line      0x00036a         0x39 build/default/production/main.o
+ .debug_line      0x0003a3         0xee build/default/production/system.o
+ .debug_line      0x000491        0x14c build/default/production/uart.o
+ .debug_line      0x0005dd         0x1a build/default/production/interrupts.o
+ .debug_line      0x0005f7        0x19f build/default/production/bluetooth.o
 
-.debug_frame      0x000000        0x420
+.debug_frame      0x000000        0x42a
  *(.debug_frame)
  .debug_frame     0x000000         0xd8 build/default/production/adc1.o
  .debug_frame     0x0000d8         0xdc build/default/production/app.o
  .debug_frame     0x0001b4         0x68 build/default/production/gpio.o
  .debug_frame     0x00021c         0x30 build/default/production/main.o
  .debug_frame     0x00024c         0x30 build/default/production/system.o
- .debug_frame     0x00027c         0xc4 build/default/production/uart.o
- .debug_frame     0x000340         0xe0 build/default/production/bluetooth.o
+ .debug_frame     0x00027c         0xce build/default/production/uart.o
+ .debug_frame     0x00034a         0xe0 build/default/production/bluetooth.o
 
-.debug_str        0x000000        0x143
+.debug_str        0x000000        0x115
  *(.debug_str)
  .debug_str       0x000000         0x35 build/default/production/adc1.o
  .debug_str       0x000035         0x43 build/default/production/app.o
  .debug_str       0x000078          0xb build/default/production/gpio.o
- .debug_str       0x000083         0x85 build/default/production/uart.o
- .debug_str       0x000108         0x3b build/default/production/bluetooth.o
+ .debug_str       0x000083         0x57 build/default/production/uart.o
+ .debug_str       0x0000da         0x3b build/default/production/bluetooth.o
 
 .debug_loc
  *(.debug_loc)
@@ -1171,19 +1171,19 @@ __FDS
                     0x0230                  UART2 = 0x230
                     0x0230                  _UART2 = 0x230
 START GROUP
-LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a
-LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a
-LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a
+LOAD c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/node.X.production.elf elf32-pic30)
-LOAD /CW/_FGS`½ä
-LOAD /CW/_FBS(Mä
+LOAD /CW/_FGSfÂ
+LOAD /CW/_FBS
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000a8        0x3cf
+                  0x0000a8        0x3bd
  .debug_pubtypes
                   0x0000a8         0x99 build/default/production/adc1.o
  .debug_pubtypes
@@ -1195,64 +1195,64 @@ LOAD data_init
  .debug_pubtypes
                   0x000269         0x1f build/default/production/system.o
  .debug_pubtypes
-                  0x000288        0x147 build/default/production/uart.o
+                  0x000288        0x135 build/default/production/uart.o
  .debug_pubtypes
-                  0x0003cf         0x12 build/default/production/interrupts.o
+                  0x0003bd         0x12 build/default/production/interrupts.o
  .debug_pubtypes
-                  0x0003e1         0x96 build/default/production/bluetooth.o
+                  0x0003cf         0x96 build/default/production/bluetooth.o
 
 __c30_signature
-                  0x000477         0x96
+                  0x000465         0x96
  __c30_signature
-                  0x000477          0x6 build/default/production/adc1.o
+                  0x000465          0x6 build/default/production/adc1.o
  __c30_signature
-                  0x00047d          0x6 build/default/production/app.o
+                  0x00046b          0x6 build/default/production/app.o
  __c30_signature
-                  0x000483          0x6 build/default/production/gpio.o
+                  0x000471          0x6 build/default/production/gpio.o
  __c30_signature
-                  0x000489          0x6 build/default/production/main.o
+                  0x000477          0x6 build/default/production/main.o
  __c30_signature
-                  0x00048f          0x6 build/default/production/system.o
+                  0x00047d          0x6 build/default/production/system.o
  __c30_signature
-                  0x000495          0x6 build/default/production/uart.o
+                  0x000483          0x6 build/default/production/uart.o
  __c30_signature
-                  0x00049b          0x6 build/default/production/interrupts.o
+                  0x000489          0x6 build/default/production/interrupts.o
  __c30_signature
-                  0x0004a1          0x6 build/default/production/bluetooth.o
+                  0x00048f          0x6 build/default/production/bluetooth.o
  __c30_signature
-                  0x0004a7          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x000495          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x0004ad          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x00049b          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x0004b3          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
+                  0x0004a1          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
  __c30_signature
-                  0x0004b9          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strcmp.XX_eo)
+                  0x0004a7          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strcmp.XX_eo)
  __c30_signature
-                  0x0004bf          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strlen.XX_eo)
+                  0x0004ad          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strlen.XX_eo)
  __c30_signature
-                  0x0004c5          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0004b3          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
  __c30_signature
-                  0x0004cb          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x0004b9          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
  __c30_signature
-                  0x0004d1          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                  0x0004bf          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
  __c30_signature
-                  0x0004d7          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+                  0x0004c5          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
  __c30_signature
-                  0x0004dd          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+                  0x0004cb          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
  __c30_signature
-                  0x0004e3          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+                  0x0004d1          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
  __c30_signature
-                  0x0004e9          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+                  0x0004d7          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
  __c30_signature
-                  0x0004ef          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+                  0x0004dd          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
  __c30_signature
-                  0x0004f5          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                  0x0004e3          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divsi3.eo)
  __c30_signature
-                  0x0004fb          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x0004e9          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x000501          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                  0x0004ef          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
  __c30_signature
-                  0x000507          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x0004f5          0x6 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
 
 .nbss               0x0800        0x47e
  .nbss              0x0800        0x42e build/default/production/bluetooth.o
@@ -1278,8 +1278,8 @@ __c30_signature
                     0x0cba                  _ctr
 
 .data               0x0cbc         0x3c
- .data              0x0cbc         0x22 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
- .data              0x0cde         0x1a c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+ .data              0x0cbc         0x22 c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+ .data              0x0cde         0x1a c:/program files (x86)/microchip/xc16/v1.35/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
 
 .ivt._T1Interrupt
                   0x00001a          0x2
@@ -1312,48 +1312,48 @@ __c30_signature
  .ivt._U2RXInterrupt
                   0x000050          0x2 build/default/production/uart.o
 
-.const              0x8d84         0x8c load address 0x000d84  
- .const             0x8d84         0x88 build/default/production/bluetooth.o
- .const             0x8e0c          0x4 build/default/production/app.o
+.const              0x8db6         0x6e load address 0x000db6  
+ .const             0x8db6         0x6a build/default/production/bluetooth.o
+ .const             0x8e20          0x4 build/default/production/app.o
 
-.text             0x000e10        0x752
- .text            0x000e10        0x43e build/default/production/bluetooth.o
-                  0x000e10                  _BLE_init
-                  0x000e56                  _BLE_reboot
-                  0x000e76                  _node_application
-                  0x00106c                  _BLE_connect
-                  0x0010c8                  _BLE_searchStr
-                  0x001170                  _BLE_parseData
-                  0x00120e                  _BLE_disconnect
- .text            0x00124e        0x116 build/default/production/adc1.o
-                  0x00124e                  _ADC1_init
-                  0x00129c                  _ADC1_start
-                  0x0012b6                  _ADC1_stop
-                  0x0012be                  _ADC1_conversionComplete
-                  0x0012d6                  _ADC1_channelSelect
-                  0x0012e2                  _ADC1_vRefSelect
-                  0x001344                  _ADC1_getConversion
- .text            0x001364         0xc6 build/default/production/app.o
-                  0x001364                  _application_init
-                  0x001382                  _getConversions
-                  0x0013da                  _timer_init
-                  0x0013fa                  _ms_delay
- .text            0x00142a         0xc6 build/default/production/uart.o
-                  0x00142a                  _uart_init
-                  0x001456                  _uart_write_byte
-                  0x001462                  _uart_print
-                  0x001496                  _uart_write_string
-                  0x0014cc                  _clearBuffer
- .text            0x0014f0         0x72 build/default/production/gpio.o
-                  0x0014f0                  _GPIO_enable
-                  0x001544                  _GPIO_lo
-                  0x001554                  _GPIO_hi
+.text             0x000e24        0x6a8
+ .text            0x000e24        0x38a build/default/production/bluetooth.o
+                  0x000e24                  _BLE_init
+                  0x000e6a                  _node_application
+                  0x000fb2                  _BLE_connect
+                  0x00100e                  _BLE_searchStr
+                  0x0010b6                  _BLE_parseData
+                  0x001154                  _BLE_reboot
+                  0x001174                  _BLE_disconnect
+ .text            0x0011ae        0x116 build/default/production/adc1.o
+                  0x0011ae                  _ADC1_init
+                  0x0011fc                  _ADC1_start
+                  0x001216                  _ADC1_stop
+                  0x00121e                  _ADC1_conversionComplete
+                  0x001236                  _ADC1_channelSelect
+                  0x001242                  _ADC1_vRefSelect
+                  0x0012a4                  _ADC1_getConversion
+ .text            0x0012c4         0xc6 build/default/production/app.o
+                  0x0012c4                  _application_init
+                  0x0012e2                  _getConversions
+                  0x00133a                  _timer_init
+                  0x00135a                  _ms_delay
+ .text            0x00138a         0xc6 build/default/production/uart.o
+                  0x00138a                  _uart_init
+                  0x0013b6                  _uart_write_byte
+                  0x0013c2                  _uart_print
+                  0x0013f6                  _uart_write_string
+                  0x00142c                  _clearBuffer
+ .text            0x001450         0x7c build/default/production/gpio.o
+                  0x001450                  _GPIO_enable
+                  0x0014ae                  _GPIO_lo
+                  0x0014be                  _GPIO_hi
 
-.dinit            0x001562         0x72
- .dinit           0x001562         0x72 data_init
+.dinit            0x0014cc         0x72
+ .dinit           0x0014cc         0x72 data_init
 
-.text             0x0015d4         0x26
- .text            0x0015d4         0x1c build/default/production/system.o
-                  0x0015d4                  _system_init
- .text            0x0015f0          0xa build/default/production/main.o
-                  0x0015f0                  _main
+.text             0x00153e         0x2a
+ .text            0x00153e         0x1c build/default/production/system.o
+                  0x00153e                  _system_init
+ .text            0x00155a          0xe build/default/production/main.o
+                  0x00155a                  _main

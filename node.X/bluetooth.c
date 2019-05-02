@@ -16,8 +16,8 @@ char MAC_NEXT[20] = "";
 void BLE_init(void)
 {
     //Used for my debug LED
-    ANSBbits.ANSB12 = 0;
-    TRISBbits.TRISB12 = 0;
+    TRISAbits.TRISA3 = 0;
+    ANSAbits.ANSA3 = 0;
     //
     int i;
     for(i = 0; i < READINGS; i++)
@@ -36,48 +36,37 @@ void BLE_init(void)
     command_byte = IDLE;
 }
 
-void BLE_reboot(void)
-{
-    memset(bleData.packetBuf,'\0',PACKET_LEN);
-    bleData.packetIndex = 0;
-    bleData.isConnected = false;
-    bleData.isTryingConn = false;
-    bleData.searchStreamEn = true;
-    bleData.searchCmdEn = true;
-    bleData.searchMacEn = true;
-}
-
 void node_application(void)
 {
     if(bleData.dataReceived)
     {
+        bleData.dataReceived = false;
         if(BLE_searchStr("SEND_DATA,0", bleData.packetBuf))
         {//Enter when previous nodes wants this nodes data
             command_byte = SEND_DATA;
             memset(bleData.packetBuf,'\0',PACKET_LEN);
             bleData.packetIndex = 0;
-            LED_JOSH = 1;
         }
         if(BLE_searchStr("SEND_DATA,1", bleData.packetBuf))
-        {//Enter when previous nodes wants next nodes data
+        {//Enter when previous nodes wants next nodes data            
             command_byte = CONNECT_NEXT;
             BLE_disconnect();
             memset(bleData.packetBuf,'\0',PACKET_LEN);
             bleData.packetIndex = 0;
+            bleData.searchCmdEn = true;
+            bleData.searchMacEn = true;
+            bleData.searchStreamEn = true;
+            bleData.isConnected = false;
+            bleData.isTryingConn = false;
         }        
         if(BLE_searchStr("SEND_DATA,2", bleData.packetBuf))
         {//Enter when previous nodes wants next nodes next data
             command_byte = SEND_MAC;
             memset(bleData.packetBuf,'\0',PACKET_LEN);
             bleData.packetIndex = 0;
-        }        
-        if(BLE_searchStr("REBOOT", bleData.packetBuf))
-        {//Reset all variables if bluetooth transmits REBOOT
-            BLE_reboot();
-            command_byte = IDLE;
-        }        
+        }
     }
-    
+        
     if(command_byte == IDLE)
     {
         
@@ -103,65 +92,22 @@ void node_application(void)
         bleData.data[2][3] = '\0';
         command_byte = CONNECT_LAST;
     }
-//    else if(command_byte == CONNECT_NEXT)
-//    {
-//        if(BLE_searchStr("CMD>", bleData.packetBuf))
-//        {//If CMD mode successfully entered
-//            memset(bleData.packetBuf,'\0',PACKET_LEN);
-//            bleData.packetIndex = 0;
-//            BLE_connect(2,1);
-//        }
-//        if(BLE_searchStr(MAC_NEXT, bleData.packetBuf))
-//        {//Search for the MAC address of the next node for this node
-//            memset(bleData.packetBuf,'\0',PACKET_LEN);
-//            bleData.packetIndex = 0;
-//            BLE_connect(3,1);
-//        }
-//        if(BLE_searchStr("STREAM_OPEN", bleData.packetBuf) && bleData.isTryingConn)
-//        {//Once stream is open, tell next node to send back ITS data
-//            memset(bleData.packetBuf,'\0',PACKET_LEN);
-//            bleData.packetIndex = 0;
-//            bleData.isConnected = true;
-//            uart_print("SEND_DATA,0");
-//        }
-//        if(bleData.isConnected)
-//        {
-//            if(BLE_parseData(bleData.packetBuf))
-//            {
-//                uart_print("K,1\r");
-//                ms_delay(50);
-//                bluetooth_reboot();
-//                command_byte = CONNECT_LAST;
-//            }
-//        }
-//        if(!bleData.isTryingConn)
-//        {//If this is the first time in this if, do this
-//            bluetooth_reboot();
-//            ms_delay(250);
-//            BLE_connect(1, 1);
-//        }
-//    }
     else if(command_byte == CONNECT_LAST)
     {
         if(bleData.searchCmdEn && BLE_searchStr("CMD>", bleData.packetBuf))
         {//If CMD mode successfully entered
             bleData.searchCmdEn = false;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
             BLE_connect(2,0);
+            
         }
         if(bleData.searchMacEn && BLE_searchStr(MAC_LAST, bleData.packetBuf))
         {//Search for the MAC address of the next node for this node
             bleData.searchMacEn = false;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
             BLE_connect(3,0);
         }
         if(bleData.searchStreamEn && BLE_searchStr("STREAM_OPEN", bleData.packetBuf))
         {
             bleData.searchStreamEn = false;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
             bleData.isConnected = true;
         }
         if(bleData.isConnected && BLE_searchStr("AOK", bleData.packetBuf))
@@ -173,13 +119,19 @@ void node_application(void)
 //                uart_print(",");
 //            }
             uart_print("123,456,789,");
-            BLE_reboot();
             command_byte = IDLE;            
         }
         if(!bleData.isTryingConn)
         {//If this is the first time in this if, do this
             bleData.isTryingConn = true;
             BLE_connect(1, 0);
+        }
+        if(BLE_searchStr("DISCONNECT", bleData.packetBuf))
+        {//Reset all variables if bluetooth transmits REBOOT
+            LED_JOSH = 1;
+            memset(bleData.packetBuf,'\0',PACKET_LEN);
+            bleData.packetIndex = 0;
+            BLE_connect(3,0);
         }
     }
     else if(command_byte == SEND_MAC)
@@ -192,46 +144,7 @@ void node_application(void)
     }
     else if(command_byte == TEST)
     {
-        if(bleData.searchCmdEn && BLE_searchStr("CMD>", bleData.packetBuf))
-        {//If CMD mode successfully entered
-            bleData.searchCmdEn = false;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
-            BLE_connect(2,0);
-        }
-        if(bleData.searchMacEn && BLE_searchStr(MAC_LAST, bleData.packetBuf))
-        {//Search for the MAC address of the next node for this node
-            bleData.searchMacEn = false;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
-            BLE_connect(3,0);
-        }
-        if(bleData.searchStreamEn && BLE_searchStr("STREAM_OPEN", bleData.packetBuf))
-        {
-            bleData.searchStreamEn = false;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
-            bleData.isConnected = true;
-        }
-        if(bleData.isConnected)
-        {
-            uart_print("123,456,789,");
-            command_byte = DISCONNECT;
-        }
-        if(BLE_searchStr("DISCONNECT", bleData.packetBuf))
-        {
-            uart_print("R,1");
-            BLE_reboot();
-        }
-        if(BLE_searchStr("REBOOT", bleData.packetBuf))
-        {
-            BLE_reboot();
-        }
-        if(!bleData.isTryingConn)
-        {//If this is the first time in this state, do this
-            bleData.isTryingConn = true;
-            BLE_connect(1,0);
-        }
+        
     }
 }
 
@@ -323,6 +236,17 @@ bool BLE_parseData(char str[])
     return true;
 }
 
+void BLE_reboot(void)
+{
+    memset(bleData.packetBuf,'\0',PACKET_LEN);
+    bleData.packetIndex = 0;
+    bleData.isConnected = false;
+    bleData.isTryingConn = false;
+    bleData.searchStreamEn = true;
+    bleData.searchCmdEn = true;
+    bleData.searchMacEn = true;
+}
+
 void BLE_disconnect()
 {
     BLE_connect(1,0);
@@ -332,6 +256,4 @@ void BLE_disconnect()
     uart_print("---\r");
     memset(bleData.packetBuf,'\0',PACKET_LEN);
     bleData.packetIndex = 0;
-    uart_print("\r\n--Disconnect--\r\n");
-    BLE_reboot();
 }
