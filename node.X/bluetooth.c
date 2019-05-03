@@ -15,10 +15,6 @@ char MAC_NEXT[20] = "";
 
 void BLE_init(void)
 {
-    //Used for my debug LED
-    TRISAbits.TRISA3 = 0;
-    ANSAbits.ANSA3 = 0;
-    //
     int i;
     for(i = 0; i < READINGS; i++)
     {
@@ -32,6 +28,7 @@ void BLE_init(void)
     bleData.searchStreamEn = true;
     bleData.searchCmdEn = true;
     bleData.searchMacEn = true;
+    bleData.bondedLast = false;
     
     command_byte = IDLE;
 }
@@ -54,7 +51,6 @@ void node_application(void)
             memset(bleData.packetBuf,'\0',PACKET_LEN);
             bleData.packetIndex = 0;
             bleData.searchCmdEn = true;
-            bleData.searchMacEn = true;
             bleData.searchStreamEn = true;
             bleData.isConnected = false;
             bleData.isTryingConn = false;
@@ -66,7 +62,7 @@ void node_application(void)
             bleData.packetIndex = 0;
         }
     }
-        
+ 
     if(command_byte == IDLE)
     {
         
@@ -95,15 +91,9 @@ void node_application(void)
     else if(command_byte == CONNECT_LAST)
     {
         if(bleData.searchCmdEn && BLE_searchStr("CMD>", bleData.packetBuf))
-        {//If CMD mode successfully entered
+        {
             bleData.searchCmdEn = false;
-            BLE_connect(2,0);
-            
-        }
-        if(bleData.searchMacEn && BLE_searchStr(MAC_LAST, bleData.packetBuf))
-        {//Search for the MAC address of the next node for this node
-            bleData.searchMacEn = false;
-            BLE_connect(3,0);
+            BLE_connect(4, 0);
         }
         if(bleData.searchStreamEn && BLE_searchStr("STREAM_OPEN", bleData.packetBuf))
         {
@@ -112,26 +102,13 @@ void node_application(void)
         }
         if(bleData.isConnected && BLE_searchStr("AOK", bleData.packetBuf))
         {
-//            int i = 0;
-//            while(bleData.data[i][0] != '\0')
-//            {
-//                uart_print(bleData.data[i]);
-//                uart_print(",");
-//            }
             uart_print("123,456,789,");
-            command_byte = IDLE;            
+            command_byte = IDLE;
         }
         if(!bleData.isTryingConn)
-        {//If this is the first time in this if, do this
+        {
             bleData.isTryingConn = true;
             BLE_connect(1, 0);
-        }
-        if(BLE_searchStr("DISCONNECT", bleData.packetBuf))
-        {//Reset all variables if bluetooth transmits REBOOT
-            LED_JOSH = 1;
-            memset(bleData.packetBuf,'\0',PACKET_LEN);
-            bleData.packetIndex = 0;
-            BLE_connect(3,0);
         }
     }
     else if(command_byte == SEND_MAC)
@@ -153,7 +130,6 @@ void BLE_connect(int count, int dir)
     //This function is used to actually connect to the RN4871
     //(Bluetooth Module). Count is used form rest of program
     //to control what commands are being sent.
-    
     if(count == 1)
     {
         uart_print("$");
@@ -175,6 +151,10 @@ void BLE_connect(int count, int dir)
         uart_print("C,0,"); //Connect to module
         uart_print(MAC_LAST);
         uart_print("\r");
+    }
+    else if(count == 4 && dir == 0)
+    {
+        uart_print("C1\r");
     }
 }
 
@@ -254,6 +234,7 @@ void BLE_disconnect()
     uart_print("K,1\r");
     while(!BLE_searchStr("DISCONNECT", bleData.packetBuf));
     uart_print("---\r");
+    while(!BLE_searchStr("END", bleData.packetBuf));
     memset(bleData.packetBuf,'\0',PACKET_LEN);
     bleData.packetIndex = 0;
 }

@@ -45,11 +45,8 @@ void application_init(void)
     ADC1_init();
     uart_init();          
     GPIO_enable(0x0380);
-    TRISAbits.TRISA2 = 0;
-    ANSAbits.ANSA2 = 0;
     appData.ms = 0;
     appData.seconds = 0;
-    appData.sampleFlag = false;
     appData.U2RxByte = 0x30;
 }
 
@@ -57,30 +54,28 @@ void application_init(void)
 bool getConversions(void)
 {
     GPIO_hi(A);
-        
-                // soil moisture conversion
-                appData.soilConversion = ADC1_getConversion(ADC1_SOIL);
+    ms_delay(1);
+    // soil moisture conversion
+    appData.soilConversion = ADC1_getConversion(ADC1_SOIL);
 
-                // photo sensor conversion
-                appData.liteConversion = ADC1_getConversion(ADC1_LITE);           
+    // photo sensor conversion
+    appData.liteConversion = ADC1_getConversion(ADC1_LITE);           
 
-                // temperature conversion
-                appData.tempConversion = ADC1_getConversion(ADC1_TEMP);
+    // temperature conversion
+    appData.tempConversion = ADC1_getConversion(ADC1_TEMP);
 
 
-                sprintf(U2TxBuffer,"%i,",(uint16_t)appData.soilConversion);
-                uart_write_string(U2TxBuffer); 
+    sprintf(U2TxBuffer,"%i,",(uint16_t)appData.soilConversion);
+    uart_write_string(U2TxBuffer); 
 
-                sprintf(U2TxBuffer,"%i,",(uint16_t)appData.liteConversion);   
-                uart_write_string(U2TxBuffer);              
-        
-                sprintf(U2TxBuffer,"%i,",(uint16_t)appData.tempConversion);
-                uart_write_string(U2TxBuffer);
-        GPIO_lo(A);
- 
+    sprintf(U2TxBuffer,"%i,",(uint16_t)appData.liteConversion);   
+    uart_write_string(U2TxBuffer);              
+
+    sprintf(U2TxBuffer,"%i,",(uint16_t)appData.tempConversion);
+    uart_write_string(U2TxBuffer);
+    GPIO_lo(A);
    
     return true;
-
 }
 
 void timer_init(void)

@@ -29,10 +29,9 @@ uint16_t ctr = 0;
  *  
  ***************************************************************/
 void ADC1_init(void) {
+    
     ANSB |= ADC1_INPUTS;
     TRISB |= ADC1_INPUTS;
-    ANSB &= ~(MUX_BITS);
-    TRISB |= ~(MUX_BITS);
     AD1CON3bits.ADCS = 0xFF;
     AD1CON3bits.SAMC = 0xF;
     AD1CON1bits.SSRC = 0x0;
@@ -72,21 +71,22 @@ void ADC1_vRefSelect(ADC1_CHANNEL channel) {
         case ADC1_TEMP:
             AD1CON2bits.PVCFG = 0b1;
             AD1CON2bits.NVCFG = 0b1;
-            MUX_PORT |= (~B | ~C); // 1.75 - 0.1 volts per the MCP9700 data sheet
+            MUX_PORT &= ~(B | C); // 1.75 - 0.1 volts per the MCP9700 data sheet
             break;
 
         case ADC1_SOIL:
             AD1CON2bits.PVCFG = 0b1;
             AD1CON2bits.NVCFG = 0b1;
-            MUX_PORT |= (~B | C); //  1.75 - something via testing
+            LATBbits.LATB9 = 0;
+            LATBbits.LATB8 = 1;
             break;
 
         default:
             AD1CON2bits.PVCFG = 0b0;
             AD1CON2bits.NVCFG = 0b0;
+            MUX_PORT &=~(0x0380);
             break;
     }
-
 
     AD1CON1bits.ADON = 1;
 }

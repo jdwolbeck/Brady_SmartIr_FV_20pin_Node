@@ -20,6 +20,7 @@ typedef enum{
     SEND_MAC = 0x03,
     DISCONNECT = 0x04,
     SEND_DATA = 0x05,
+    SET_BOND = 0x06,
     TEST = 0x0F
 } COMMAND_BYTE;
 
@@ -34,6 +35,7 @@ typedef struct
     bool searchCmdEn;
     bool searchMacEn;
     bool searchStreamEn;
+    bool bondedLast;
 } BLE_DATA;
 
 extern BLE_DATA bleData;
