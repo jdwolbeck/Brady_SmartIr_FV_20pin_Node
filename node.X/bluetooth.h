@@ -1,3 +1,6 @@
+#ifndef _BLUETOOTH_H
+#define _BLUETOOTH_H
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
@@ -8,10 +11,6 @@
 #define PACKET_LEN 1024
 
 #define LED_JOSH LATAbits.LATA3
-
-extern char MAC_LAST[20];
-extern char MAC_THIS[20];
-extern char MAC_NEXT[20];
 
 typedef enum{
     IDLE = 0x00,
@@ -39,6 +38,9 @@ typedef struct
 } BLE_DATA;
 
 extern BLE_DATA bleData;
+extern char MAC_LAST[20];
+extern char MAC_THIS[20];
+extern char MAC_NEXT[20];
 
 void BLE_init(void);
 void BLE_reboot(void);
@@ -47,3 +49,5 @@ void BLE_connect(int,int);
 bool BLE_searchStr(char[],char[]);
 bool BLE_parseData(char[]);
 void BLE_disconnect(void);
+
+#endif //_BLUETOOTH_H

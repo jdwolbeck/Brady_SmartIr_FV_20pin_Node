@@ -29,21 +29,18 @@ uint16_t ctr = 0;
  *  
  ***************************************************************/
 void ADC1_init(void) {
-    
     ANSB |= ADC1_INPUTS;
     TRISB |= ADC1_INPUTS;
     AD1CON3bits.ADCS = 0xFF;
     AD1CON3bits.SAMC = 0xF;
     AD1CON1bits.SSRC = 0x0;
     AD1CON1bits.FORM = 0;
-    AD1CON2bits.SMPI = 0x0;
-    
+    AD1CON2bits.SMPI = 0x0;  
 }
 
 void ADC1_start(void) {
     AD1CON1bits.SAMP = 1;
     for (ctr = 1000; ctr > 0; ctr--);
-
 }
 
 void ADC1_stop(void) {
@@ -59,32 +56,31 @@ void ADC1_channelSelect(ADC1_CHANNEL channel) {
 }
 
 void ADC1_vRefSelect(ADC1_CHANNEL channel) {
-
     AD1CON1bits.ADON = 0;
     switch (channel) {
-
         case ADC1_LITE:
             AD1CON2bits.PVCFG = 0;
             AD1CON2bits.NVCFG = 0;
+            LATBbits.LATB9 = 0;
+            LATBbits.LATB8 = 0;
             break;
-
         case ADC1_TEMP:
             AD1CON2bits.PVCFG = 0b1;
             AD1CON2bits.NVCFG = 0b1;
-            MUX_PORT &= ~(B | C); // 1.75 - 0.1 volts per the MCP9700 data sheet
+            LATBbits.LATB9 = 0;
+            LATBbits.LATB8 = 0;
             break;
-
         case ADC1_SOIL:
-            AD1CON2bits.PVCFG = 0b1;
-            AD1CON2bits.NVCFG = 0b1;
+            AD1CON2bits.PVCFG = 0b0;
+            AD1CON2bits.NVCFG = 0b0;
             LATBbits.LATB9 = 0;
             LATBbits.LATB8 = 1;
             break;
-
         default:
             AD1CON2bits.PVCFG = 0b0;
             AD1CON2bits.NVCFG = 0b0;
-            MUX_PORT &=~(0x0380);
+            LATBbits.LATB9 = 0;
+            LATBbits.LATB8 = 0;
             break;
     }
 
@@ -106,8 +102,3 @@ uint16_t ADC1_getConversion(ADC1_CHANNEL channel) {
 
     return ADC1BUF0;
 }
-
-
-/**
-  End of File
- */
